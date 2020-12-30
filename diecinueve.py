@@ -28,11 +28,13 @@ def test():
 
 # tests for parse_conditions function
 def test_parse_conditions():
+    assert parse_conditions(inputs) == ["abbbab", "ababbb"]
     return False
 
 
 # tests for part1 function
 def test_part1():
+    assert part1(inputs) == 2
     return False
 
 
