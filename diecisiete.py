@@ -83,7 +83,7 @@ def part1(inputs):
         next_active_fields = set()
         for active_field in active_fields:
             update_neighbors(active_fields, active_field, next_active_fields, False)
-        active_fields = next_&active_fields
+        active_fields = next_active_fields
     return len(active_fields)
 
 

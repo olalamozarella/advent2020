@@ -21,28 +21,21 @@ def part2(inputs):
 
 # all tests
 def test():
-    assert test_parse_conditions() is True
-    assert test_part1() is True
+    test_parse_conditions()
+    test_part1()
     print("All tests passed!")
 
 
 # tests for parse_conditions function
 def test_parse_conditions():
-    assert parse_conditions("0: 4 1 5\n1: 2 3 | 3 2\n2: 4 4 | 5 5\n3: 4 5 | 5 4\n4: \"a\"\n5: \"b\"\n\nababbb\nbababa\nabbbab\naaabbb\naaaabbb") == ["aaaabb",
-                                                                                                          "aaabab",
-                                                                                                          "abbabb",
-                                                                                                          "abbbab",
-                                                                                                          "aabaab",
-                                                                                                          "abaaab",
-                                                                                                          "aabbbb",
-                                                                                                          "ababbb"]
-    return False
+    test_inputs = "0: 4 1 5\n1: 2 3 | 3 2\n2: 4 4 | 5 5\n3: 4 5 | 5 4\n4: \"a\"\n5: \"b\"\n\nababbb\nbababa\nabbbab\naaabbb\naaaabbb"
+    assert parse_conditions(test_inputs) == ["aaaabb", "aaabab", "abbabb", "abbbab", "aabaab", "abaaab", "aabbbb", "ababbb"]
 
 
 # tests for part1 function
 def test_part1():
-    assert part1("0: 4 1 5\n1: 2 3 | 3 2\n2: 4 4 | 5 5\n3: 4 5 | 5 4\n4: \"a\"\n5: \"b\"\n\nababbb\nbababa\nabbbab\naaabbb\naaaabbb") == 2
-    return False
+    test_inputs = "0: 4 1 5\n1: 2 3 | 3 2\n2: 4 4 | 5 5\n3: 4 5 | 5 4\n4: \"a\"\n5: \"b\"\n\nababbb\nbababa\nabbbab\naaabbb\naaaabbb"
+    assert part1(test_inputs) == 2
 
 
 # ---------------------------------------- MAIN ---------------------------------------- #
