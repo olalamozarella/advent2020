@@ -28,7 +28,7 @@ def test():
 
 # tests for parse_conditions function
 def test_parse_conditions():
-    assert parse_conditions("0: 4 1 5\n1: 2 3 | 3 2\n2: 4 4 | 5 5\n3: 4 5 | 5 4\n4: \"a\"\n5: \"b\"") == ["aaaabb",
+    assert parse_conditions("0: 4 1 5\n1: 2 3 | 3 2\n2: 4 4 | 5 5\n3: 4 5 | 5 4\n4: \"a\"\n5: \"b\"\n\nababbb\nbababa\nabbbab\naaabbb\naaaabbb") == ["aaaabb",
                                                                                                           "aaabab",
                                                                                                           "abbabb",
                                                                                                           "abbbab",
@@ -41,7 +41,7 @@ def test_parse_conditions():
 
 # tests for part1 function
 def test_part1():
-    assert part1("0: 4 1 5\n1: 2 3 | 3 2\n2: 4 4 | 5 5\n3: 4 5 | 5 4\n4: \"a\"\n5: \"b\"") == 2
+    assert part1("0: 4 1 5\n1: 2 3 | 3 2\n2: 4 4 | 5 5\n3: 4 5 | 5 4\n4: \"a\"\n5: \"b\"\n\nababbb\nbababa\nabbbab\naaabbb\naaaabbb") == 2
     return False
 
 
