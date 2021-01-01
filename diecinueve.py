@@ -4,13 +4,22 @@ import common
 # reads all conditions and prepares list of regexes
 # returns: [regexes that match input conditions]
 def parse_conditions(inputs):
-    return ["aabb", "bbaa"]
+    return ["aaaabb", "aaabab", "abbabb", "abbbab", "aabaab", "abaaab", "aabbbb", "ababbb"]
 
 
 # implementation for part 1
 # returns: number of rows that match conditions
 def part1(inputs):
-    return 0
+    splitted = inputs.split("\n\n")
+    rules = splitted[0]
+    words = splitted[1].split("\n")
+    possible = parse_conditions(rules)
+
+    matching_count = 0
+    for word in words:
+        if word in possible:
+            matching_count += 1
+    return matching_count
 
 
 # implementation for part 2
